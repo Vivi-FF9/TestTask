@@ -1,0 +1,5 @@
+*logs/
+*reports/
+*.pytest_cache/
+*allure-results/
+/.result/

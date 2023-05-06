@@ -1,11 +1,11 @@
 from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
 from Source.users import User
 from UI.PageObject.Pages.abstract_page import AbsPage
 from UI.PageObject.Locators.main_header_locators import MainHeaderLocators
 from UI.PageObject.Locators.start_page_locators import StartPageLocators
 from UI.PageObject.Locators.login_locators import LoginPageLocators
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
 
 
 class MainHeader(AbsPage):

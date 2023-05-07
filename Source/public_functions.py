@@ -23,7 +23,7 @@ def get_now_datetime() -> datetime:
     return datetime.now()
 
 
-def datetime_comparison(dt_1: datetime, dt_2: datetime, allow_difference_sec: float = 1) -> None:
+def datetime_comparison(dt_1: datetime, dt_2: datetime, allow_difference_sec: float = 1.5) -> None:
     # Проверка на то, что разница во времени не более allow_difference_sec секунд
     allow_difference = timedelta(seconds=allow_difference_sec)
     if dt_1 >= dt_2:

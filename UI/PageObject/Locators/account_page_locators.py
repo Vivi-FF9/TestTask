@@ -10,3 +10,4 @@ class AccountPageLocators:
     SUBMIT_BUTTON = (By.CSS_SELECTOR, 'button[type="submit"]')
     ACCOUNT_INFO_ELEMENTS = (By.CSS_SELECTOR, '.center .ng-binding')
     MESSAGE = (By.CSS_SELECTOR, '[ng-show="message"]')
+

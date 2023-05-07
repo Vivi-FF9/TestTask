@@ -28,7 +28,8 @@ class BasePage(AbsPage):
         self.driver.get(f"{self.host}/#/login")
         self.find_element(StartPageLocators.CUSTOMER_LOGIN_BUTTON).click()
         self.find_element(LoginPageLocators.USER_SELECTOR).click()
-        self.find_element(LoginPageLocators.USER_OPTION(user.customer_id)).click()
+        self.find_element(LoginPageLocators.USER_OPTION(user.user_id)).click()
         self.find_element(LoginPageLocators.LOGIN_BUTTON).click()
         WebDriverWait(self.driver, 5).until(ec.url_changes(f"{self.host}/#/account"))
         return self
+

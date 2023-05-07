@@ -39,3 +39,4 @@ class AccountPage(BasePage):
     def go_to_transactions(self):
         self.find_element(AccountPageLocators.TRANSACTIONS_BUTTON).click()
         WebDriverWait(self.driver, 5).until(ec.url_changes(f"{self.host}/#/listTx"))
+

@@ -24,3 +24,4 @@ class AbsPage:
     def refresh(self):
         self.driver.refresh()
         return self
+

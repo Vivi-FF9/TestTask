@@ -20,3 +20,7 @@ class AbsPage:
     def find_elements(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(ec.presence_of_all_elements_located(locator),
                                                       message=f"Can't find elements by locator {locator}")
+
+    def refresh(self):
+        self.driver.refresh()
+        return self

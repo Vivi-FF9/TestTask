@@ -1,9 +1,7 @@
-import time
-
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from UI.PageObject.Pages.base_page import BasePage
-from UI.PageObject.Locators.account_locators import AccountPageLocators
+from UI.PageObject.Locators.account_page_locators import AccountPageLocators
 
 
 class AccountPage(BasePage):
@@ -39,4 +37,5 @@ class AccountPage(BasePage):
             .until(ec.text_to_be_present_in_element(AccountPageLocators.MESSAGE, "Deposit Successful"))
 
     def go_to_transactions(self):
-        pass
+        self.find_element(AccountPageLocators.TRANSACTIONS_BUTTON).click()
+        WebDriverWait(self.driver, 5).until(ec.url_changes(f"{self.host}/#/listTx"))

@@ -7,8 +7,8 @@
 
 ### Быстрый старт (Windows):
     1) Установите пакеты из requirements.txt:
-        pip install --upgrade pip
-        pip install -r test_requirements.txt
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
     2) Запустите тесты командой (при необходимости каталог хранения результатов можно изменить): 
         pytest --alluredir=./allure-results .\UI\Tests\
     3) После окончания тестов посмотрите отчет командой:

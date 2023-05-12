@@ -1,4 +1,3 @@
-import time
 import allure
 from Source.public_functions import get_today_fibonacci_num, get_now_datetime
 from UI.PageObject.Pages.account_page import AccountPage
@@ -23,13 +22,11 @@ class TestAccountOperations:
 
         amount = get_today_fibonacci_num()
         with allure.step(f'Пополняем счет на сумму числа Фибоначчи: {amount}'):
-            page.deposit(amount)
             deposit_datetime = get_now_datetime()
-            time.sleep(1)  # время чтобы "бэк" успел отработать
+            page.deposit(amount)
         with allure.step(f'Списываем со счета сумму числа Фибоначчи: {amount}'):
-            page.withdrawl(amount)
             withdrawl_datetime = get_now_datetime()
-            time.sleep(1)  # время чтобы "бэк" успел отработать
+            page.withdrawl(amount)
         with allure.step(f'Проверяем что текущий баланс равен нулю'):
             balance = page.get_balance_value()
             assert balance == 0, "Текущий баланс не 0"

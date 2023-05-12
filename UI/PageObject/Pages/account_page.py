@@ -1,3 +1,4 @@
+import time
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from UI.PageObject.Pages.base_page import BasePage
@@ -26,6 +27,7 @@ class AccountPage(BasePage):
         self.find_element(AccountPageLocators.SUBMIT_BUTTON).click()
         WebDriverWait(self.driver, 5)\
             .until(ec.text_to_be_present_in_element(AccountPageLocators.MESSAGE, "Transaction successful"))
+        time.sleep(1)  # время чтобы ангуляр успел отработать
 
     def deposit(self, amount: int):
         self.find_element(AccountPageLocators.DEPOSIT_BUTTON).click()
@@ -35,6 +37,7 @@ class AccountPage(BasePage):
         self.find_element(AccountPageLocators.SUBMIT_BUTTON).click()
         WebDriverWait(self.driver, 5) \
             .until(ec.text_to_be_present_in_element(AccountPageLocators.MESSAGE, "Deposit Successful"))
+        time.sleep(1)  # время чтобы ангуляр успел отработать
 
     def go_to_transactions(self):
         self.find_element(AccountPageLocators.TRANSACTIONS_BUTTON).click()

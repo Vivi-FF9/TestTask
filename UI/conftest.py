@@ -12,7 +12,7 @@ def driver():
         command_executor=SELENIUM_SERVER_URL,
         options=options
     )
-    driver.implicitly_wait(30)
+    driver.implicitly_wait(5)
     driver.maximize_window()
     yield driver
     driver.quit()

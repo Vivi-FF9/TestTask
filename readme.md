@@ -12,4 +12,4 @@
     2) Запустите тесты командой (при необходимости каталог хранения результатов можно изменить): 
         pytest --alluredir=./allure-results .\UI\Tests\
     3) После окончания тестов посмотрите отчет командой:
-        allure serve {путь до папки проекта}\TestTaskSimbirSoft\allure-results\
+        allure serve {путь до папки проекта}\TestTask\allure-results\
